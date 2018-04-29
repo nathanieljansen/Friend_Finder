@@ -1,0 +1,58 @@
+.questions{
+  font-size: 20px !important;
+  margin-left: -12px !important;
+}
+
+.nav-wrapper, .thisNav{
+  background: #c52a2a  !important;
+  border-radius: 30px !important;
+  border-radius: transparent !important;
+}
+
+span{
+  color: rgb(105, 118, 122) !important;
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid rgb(207, 21, 52) !important;
+}
+
+.startButton{
+  margin-top: 40px;
+}
+
+.buddyText {
+  margin-top: 40px;
+}
+
+.submitButton, .faceBuddy {
+  background-color: rgb(65, 65, 90) !important;
+}
+
+.submitButton{
+  border-radius: 30px !important;
+}
+
+.linkButtons{
+  border-radius: 30px !important;
+  background-color: rgb(65, 65, 90) !important;
+  
+}
+
+@media (max-width: 425px) {
+  .questions {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .questions {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .questions {
+    font-size: 8px !important;
+  }
+}
