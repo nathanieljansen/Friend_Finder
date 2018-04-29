@@ -116,6 +116,11 @@ app.get("/api/friends", function (req, res) {
   return res.json(friends);
 });
 
+app.post('/api/friends', function (req, res) {
+  friends.push(req.body);
+  res.json({ success: true });
+})
+
 
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
