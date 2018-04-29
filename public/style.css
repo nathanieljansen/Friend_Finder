@@ -36,7 +36,17 @@ span{
 .linkButtons{
   border-radius: 30px !important;
   background-color: rgb(65, 65, 90) !important;
+}
+
+.active {
+  color: black !important;
   
+}
+
+.yourName, .yourPicture{
+border-bottom: black !important;
+box-shadow: black !important;
+-webkit-box-shadow: 0 1px 0 0 black !important;
 }
 
 @media (max-width: 425px) {
