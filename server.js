@@ -100,8 +100,8 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/survey.html", function (req, res) {
-  res.sendFile(path.join(__dirname, "survey.html"));
+app.get("/survey", function (req, res) {
+  res.sendFile(path.join(__dirname, "/survey.html"));
 });
 
 app.get("/public/app.js", function (req, res) {
