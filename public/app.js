@@ -21,6 +21,5 @@ $(function () {
       console.log("YOU MOM");
     });
 
-
   });
 })
