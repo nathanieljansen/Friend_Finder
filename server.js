@@ -117,15 +117,49 @@ app.get("/api/friends", function (req, res) {
 });
 
 app.post('/api/friends', function (req, res) {
+  // calculation goes here: success:friend
+
+   bestMatch = {
+    name: "",
+    photo: "",
+    friendDifference: 1000
+  };
+
+  var userData = req.body;
+  var userName = userData.name;
+  var userPhoto = userData.photo;
+  var userScores = userData.scores;
+
+  var totalDifference = 0;
+  var bestMatch;
+  for (var i = 0; i < friends.length; i++) {
+
+    console.log(friends[i].name);
+    totalDifference = 0;
+
+    
+    for (var j = 0; j < friends[i].scores[j]; j++) {
+
+    
+      totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+      if (totalDifference <= bestMatch.friendDifference) { 
+        bestMatch.name = friends[i].name;
+        bestMatch.photo = friends[i].photo;
+        bestMatch.friendDifference = totalDifference;
+      }
+    }
+  }
+
   friends.push(req.body);
-  res.json({ success: true });
+  res.json(bestMatch);
+  console.log(bestMatch)
+  
 })
 
 
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
-
 
 
 
